@@ -130,6 +130,15 @@ class MyApp(QWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    
+#        font = QFont("GangwonEduAll")
+#    app.setFont(font)
+
+    app.setStyleSheet("""
+        QLabel, QLineEdit, QPlainTextEdit, QCheckBox, QRadioButton {
+            color: black;
+        }
+    """)
     win = MyApp()
     win.show()
     sys.exit(app.exec_())
