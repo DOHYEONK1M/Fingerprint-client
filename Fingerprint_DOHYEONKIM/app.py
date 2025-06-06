@@ -9,6 +9,7 @@ from main_ui import Ui_widget as Ui_Main
 from check_ui import Ui_Form as Ui_Check
 from going_ui import Ui_Form as Ui_Going
 from register_ui import Ui_Form as Ui_Register
+from close_ui import Ui_widget as UiClosePage
 
 # ✅ 폰트 설정
 #font_id = QFontDatabase.addApplicationFont("GangwonEduAll.otf")
@@ -30,6 +31,11 @@ class MyApp(QWidget):
         self.main_page = QWidget()
         self.main_ui = Ui_Main()
         self.main_ui.setupUi(self.main_page)
+        
+        # close 화면
+        self.close_page = QWidget()
+        self.close_ui = UiClosePage()
+        self.close_ui.setupUi(self.close_page)
 
         # check 화면
         self.check_page = QWidget()
@@ -64,6 +70,7 @@ class MyApp(QWidget):
         self.stack.addWidget(self.check_page)     # index 1
         self.stack.addWidget(self.going_page)     # index 2
         self.stack.addWidget(self.register_page)  # index 3
+        self.stack.addWidget(self.close_page)     # index 4
 
         self.stack.setCurrentIndex(0)
 
@@ -83,17 +90,19 @@ class MyApp(QWidget):
         self.main_ui.btn_check_in_out.clicked.connect(lambda: self.stack.setCurrentIndex(1))
         self.main_ui.btn_going_out.clicked.connect(lambda: self.stack.setCurrentIndex(2))
         self.main_ui.btn_fingerprint.clicked.connect(lambda: self.stack.setCurrentIndex(3))
-
+        self.main_ui.btn_close.clicked.connect(lambda: self.stack.setCurrentIndex(4))
+        
         # 돌아가기 버튼
         self.check_ui.btn_previous_page.clicked.connect(self.back_to_main)
         self.going_ui.btn_previous_page.clicked.connect(self.back_to_main)
         self.register_ui.btn_previous_page.clicked.connect(self.back_to_main)
-
+        self.close_ui.btn_previous_page.clicked.connect(self.back_to_main)
         # 도움말 버튼
         self.main_ui.btn_help.clicked.connect(self.show_help)
         self.check_ui.btn_help.clicked.connect(self.show_help)
         self.going_ui.btn_help.clicked.connect(self.show_help)
         self.register_ui.btn_help.clicked.connect(self.show_help)
+        self.close_ui.btn_help.clicked.connect(self.show_help)
 
     def append_number(self, num):
         self.student_number += num
@@ -121,6 +130,7 @@ class MyApp(QWidget):
         current = QDateTime.currentDateTime()
         text = current.toString("yyyy년 MM월 dd일 / hh:mm분")
         self.main_ui.label_date_time.setText(text)
+        self.close_ui.label_date_time.setText(text)
         self.check_ui.label_date_time.setText(text)
         self.going_ui.label_date_time.setText(text)
         self.register_ui.label_date_time.setText(text)
@@ -131,9 +141,9 @@ class MyApp(QWidget):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     
-#        font = QFont("GangwonEduAll")
-#    app.setFont(font)
-
+    font = QFont("GangwonEduAll")
+    app.setFont(font)
+    
     app.setStyleSheet("""
         QLabel, QLineEdit, QPlainTextEdit, QCheckBox, QRadioButton {
             color: black;

@@ -108,8 +108,15 @@ class Ui_Form(object):
         font.setWeight(75)
         self.btn_etc.setFont(font)
         self.btn_etc.setStyleSheet("QPushButton {\n"
-"    background-color: #fefbf6;\n"
-"    border: 1.5px solid #e0e0e0;\n"
+"    background-color: #fef9e7\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+";\n"
+"    border: 1.5px solid #888888;\n"
 "    border-radius: 15px;\n"
 "    padding: 10px 20px;\n"
 "    font-size: 36px;\n"
@@ -133,7 +140,7 @@ class Ui_Form(object):
         self.label_message.setObjectName("label_message")
         self.verticalLayout.addWidget(self.label_message)
         self.goingout_title = QtWidgets.QLabel(Form)
-        self.goingout_title.setGeometry(QtCore.QRect(0, 80, 120, 50))
+        self.goingout_title.setGeometry(QtCore.QRect(10, 90, 120, 50))
         self.goingout_title.setMinimumSize(QtCore.QSize(120, 50))
         self.goingout_title.setMaximumSize(QtCore.QSize(90, 50))
         font = QtGui.QFont()
@@ -201,7 +208,7 @@ class Ui_Form(object):
         self.label_date_time.setObjectName("label_date_time")
         self.btn_previous_page = QtWidgets.QPushButton(self.topbar)
         self.btn_previous_page.setEnabled(True)
-        self.btn_previous_page.setGeometry(QtCore.QRect(430, 20, 70, 45))
+        self.btn_previous_page.setGeometry(QtCore.QRect(430, 20, 70, 42))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -228,21 +235,11 @@ class Ui_Form(object):
         self.label_main_title.setText(_translate("Form", "🔽 원하는 항목을 선택해주세요."))
         self.btn_meal.setText(_translate("Form", "식사"))
         self.btn_library.setText(_translate("Form", "도서관"))
-        self.btn_goingout.setText(_translate("Form", "외출"))
-        self.btn_etc.setText(_translate("Form", "기타"))
+        self.btn_goingout.setText(_translate("Form", "기타 외출"))
+        self.btn_etc.setText(_translate("Form", "복귀"))
         self.label_message.setText(_translate("Form", "<                              \'메시지\'                              >"))
         self.goingout_title.setText(_translate("Form", "외출🚶🏻"))
         self.btn_help.setText(_translate("Form", "❓"))
         self.label_current_people.setText(_translate("Form", "현재 재실 인원 : 0명"))
-        self.label_date_time.setText(_translate("Form", "Fri May 16  10:06PM"))
+        self.label_date_time.setText(_translate("Form", "2025년 05월 19일 / 22:07분"))
         self.btn_previous_page.setText(_translate("Form", "↩"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())

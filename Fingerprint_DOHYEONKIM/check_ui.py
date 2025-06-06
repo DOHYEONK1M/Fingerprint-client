@@ -23,7 +23,7 @@ class Ui_Form(object):
 ";  /* 부드러운 에그쉘 색 */\n"
 "}")
         self.inandout_title = QtWidgets.QLabel(Form)
-        self.inandout_title.setGeometry(QtCore.QRect(10, 90, 120, 50))
+        self.inandout_title.setGeometry(QtCore.QRect(20, 100, 120, 50))
         self.inandout_title.setMinimumSize(QtCore.QSize(120, 50))
         self.inandout_title.setMaximumSize(QtCore.QSize(90, 50))
         font = QtGui.QFont()
@@ -191,15 +191,5 @@ class Ui_Form(object):
         self.label_message.setText(_translate("Form", "<                              \'메시지\'                              >"))
         self.btn_help.setText(_translate("Form", "❓"))
         self.label_current_people.setText(_translate("Form", "현재 재실 인원 : 0명"))
-        self.label_date_time.setText(_translate("Form", "Fri May 16  10:06PM"))
+        self.label_date_time.setText(_translate("Form", "2025년 05월 19일 / 22:07분"))
         self.btn_previous_page.setText(_translate("Form", "↩"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())

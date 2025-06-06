@@ -26,7 +26,7 @@ class Ui_Form(object):
 ";  /* 부드러운 에그쉘 색 */\n"
 "}")
         self.fingerprint_title = QtWidgets.QLabel(Form)
-        self.fingerprint_title.setGeometry(QtCore.QRect(10, 80, 160, 50))
+        self.fingerprint_title.setGeometry(QtCore.QRect(20, 90, 160, 50))
         self.fingerprint_title.setMinimumSize(QtCore.QSize(160, 50))
         self.fingerprint_title.setMaximumSize(QtCore.QSize(160, 50))
         font = QtGui.QFont()
@@ -476,15 +476,5 @@ class Ui_Form(object):
         self.btn_del.setText(_translate("Form", "지우기"))
         self.btn_help.setText(_translate("Form", "❓"))
         self.label_current_people.setText(_translate("Form", "현재 재실 인원 : 0명"))
-        self.label_date_time.setText(_translate("Form", "Fri May 16  10:06PM"))
+        self.label_date_time.setText(_translate("Form", "2025년 05월 19일 / 22:07분"))
         self.btn_previous_page.setText(_translate("Form", "↩"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'main.ui'
+# Form implementation generated from reading ui file 'close.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -80,6 +80,25 @@ class Ui_widget(object):
 "border-radius: 6px;\n"
 "background-color: white;")
         self.btn_help.setObjectName("btn_help")
+        self.btn_previous_page = QtWidgets.QPushButton(self.topbar)
+        self.btn_previous_page.setEnabled(True)
+        self.btn_previous_page.setGeometry(QtCore.QRect(440, 20, 70, 42))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_previous_page.sizePolicy().hasHeightForWidth())
+        self.btn_previous_page.setSizePolicy(sizePolicy)
+        self.btn_previous_page.setMinimumSize(QtCore.QSize(70, 42))
+        self.btn_previous_page.setMaximumSize(QtCore.QSize(70, 42))
+        self.btn_previous_page.setSizeIncrement(QtCore.QSize(30, 30))
+        font = QtGui.QFont()
+        font.setFamily("GangwonEduAll OTF")
+        font.setPointSize(36)
+        self.btn_previous_page.setFont(font)
+        self.btn_previous_page.setStyleSheet("border: 2px solid black;\n"
+"border-radius: 6px;\n"
+"background-color: white;")
+        self.btn_previous_page.setObjectName("btn_previous_page")
         self.layoutWidget = QtWidgets.QWidget(widget)
         self.layoutWidget.setGeometry(QtCore.QRect(60, 140, 691, 261))
         self.layoutWidget.setObjectName("layoutWidget")
@@ -96,16 +115,16 @@ class Ui_widget(object):
         self.verticalLayout.addWidget(self.label_main_title)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.btn_check_in_out = QtWidgets.QPushButton(self.layoutWidget)
-        self.btn_check_in_out.setMinimumSize(QtCore.QSize(200, 100))
-        self.btn_check_in_out.setMaximumSize(QtCore.QSize(200, 100))
+        self.btn_yes = QtWidgets.QPushButton(self.layoutWidget)
+        self.btn_yes.setMinimumSize(QtCore.QSize(200, 100))
+        self.btn_yes.setMaximumSize(QtCore.QSize(200, 100))
         font = QtGui.QFont()
         font.setFamily("GangwonEduAll OTF")
         font.setPointSize(-1)
         font.setBold(True)
         font.setWeight(75)
-        self.btn_check_in_out.setFont(font)
-        self.btn_check_in_out.setStyleSheet("QPushButton {\n"
+        self.btn_yes.setFont(font)
+        self.btn_yes.setStyleSheet("QPushButton {\n"
 "    background-color: #fefbf6;\n"
 "    border: 1.5px solid #e0e0e0;\n"
 "    border-radius: 15px;\n"
@@ -114,18 +133,18 @@ class Ui_widget(object):
 "    font-weight: bold;\n"
 "    color: #333333;\n"
 "}")
-        self.btn_check_in_out.setObjectName("btn_check_in_out")
-        self.horizontalLayout_2.addWidget(self.btn_check_in_out)
-        self.btn_going_out = QtWidgets.QPushButton(self.layoutWidget)
-        self.btn_going_out.setMinimumSize(QtCore.QSize(200, 100))
-        self.btn_going_out.setMaximumSize(QtCore.QSize(200, 100))
+        self.btn_yes.setObjectName("btn_yes")
+        self.horizontalLayout_2.addWidget(self.btn_yes)
+        self.btn_no = QtWidgets.QPushButton(self.layoutWidget)
+        self.btn_no.setMinimumSize(QtCore.QSize(200, 100))
+        self.btn_no.setMaximumSize(QtCore.QSize(200, 100))
         font = QtGui.QFont()
         font.setFamily("GangwonEduAll OTF")
         font.setPointSize(-1)
         font.setBold(True)
         font.setWeight(75)
-        self.btn_going_out.setFont(font)
-        self.btn_going_out.setStyleSheet("QPushButton {\n"
+        self.btn_no.setFont(font)
+        self.btn_no.setStyleSheet("QPushButton {\n"
 "    background-color: #fefbf6;\n"
 "    border: 1.5px solid #e0e0e0;\n"
 "    border-radius: 15px;\n"
@@ -134,56 +153,19 @@ class Ui_widget(object):
 "    font-weight: bold;\n"
 "    color: #333333;\n"
 "}")
-        self.btn_going_out.setObjectName("btn_going_out")
-        self.horizontalLayout_2.addWidget(self.btn_going_out)
-        self.btn_fingerprint = QtWidgets.QPushButton(self.layoutWidget)
-        self.btn_fingerprint.setMinimumSize(QtCore.QSize(200, 100))
-        self.btn_fingerprint.setMaximumSize(QtCore.QSize(200, 100))
-        font = QtGui.QFont()
-        font.setFamily("GangwonEduAll OTF")
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_fingerprint.setFont(font)
-        self.btn_fingerprint.setStyleSheet("QPushButton {\n"
-"    background-color: #fefbf6;\n"
-"    border: 1.5px solid #e0e0e0;\n"
-"    border-radius: 15px;\n"
-"    padding: 10px 20px;\n"
-"    font-size: 36px;\n"
-"    font-weight: bold;\n"
-"    color: #333333;\n"
-"}")
-        self.btn_fingerprint.setObjectName("btn_fingerprint")
-        self.horizontalLayout_2.addWidget(self.btn_fingerprint)
+        self.btn_no.setObjectName("btn_no")
+        self.horizontalLayout_2.addWidget(self.btn_no)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
-        self.btn_close = QtWidgets.QPushButton(widget)
-        self.btn_close.setGeometry(QtCore.QRect(20, 100, 176, 62))
-        self.btn_close.setMinimumSize(QtCore.QSize(176, 62))
-        self.btn_close.setMaximumSize(QtCore.QSize(176, 62))
+        self.closing_title = QtWidgets.QLabel(widget)
+        self.closing_title.setGeometry(QtCore.QRect(10, 90, 350, 50))
+        self.closing_title.setMinimumSize(QtCore.QSize(350, 50))
+        self.closing_title.setMaximumSize(QtCore.QSize(350, 50))
         font = QtGui.QFont()
         font.setFamily("GangwonEduAll OTF")
-        font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_close.setFont(font)
-        self.btn_close.setStyleSheet("QPushButton {\n"
-"    background-color: #fef9e7\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-";\n"
-"    border: 1.5px solid #888888;\n"
-"    border-radius: 15px;\n"
-"    padding: 10px 20px;\n"
-"    font-size: 36px;\n"
-"    font-weight: bold;\n"
-"    color: #333333;\n"
-"}")
-        self.btn_close.setObjectName("btn_close")
+        font.setPointSize(36)
+        self.closing_title.setFont(font)
+        self.closing_title.setAlignment(QtCore.Qt.AlignCenter)
+        self.closing_title.setObjectName("closing_title")
 
         self.retranslateUi(widget)
         QtCore.QMetaObject.connectSlotsByName(widget)
@@ -194,8 +176,8 @@ class Ui_widget(object):
         self.label_date_time.setText(_translate("widget", "2025년 05월 19일 / 22:07분"))
         self.label_current_people.setText(_translate("widget", "현재 재실 인원 : 0명"))
         self.btn_help.setText(_translate("widget", "❓"))
-        self.label_main_title.setText(_translate("widget", "🔽 원하는 항목을 선택해주세요."))
-        self.btn_check_in_out.setText(_translate("widget", "등하교"))
-        self.btn_going_out.setText(_translate("widget", "외출"))
-        self.btn_fingerprint.setText(_translate("widget", "지문 등록"))
-        self.btn_close.setText(_translate("widget", "문 닫기🚪"))
+        self.btn_previous_page.setText(_translate("widget", "↩"))
+        self.label_main_title.setText(_translate("widget", "문을 완전히 닫으시겠습니까 ?"))
+        self.btn_yes.setText(_translate("widget", "네"))
+        self.btn_no.setText(_translate("widget", "아니오"))
+        self.closing_title.setText(_translate("widget", "문단속🚪(키 관리자 한정)"))
